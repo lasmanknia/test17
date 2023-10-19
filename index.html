@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UDDOG</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #login-form {
+            text-align: center;
+        }
+        .main{
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;            width: 90vw;
+            height: 80vh;
+            display: grid;
+            place-content: center;
+            border-radius: 30px;
+            background-color: rgba(255, 255, 255, 0.374);
+        }
+        #log{
+            font-size: 5rem;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: solid black 2px;
+        }
+        input{
+            border: none;
+            font-size: 3rem;
+            border-radius: 20px;
+            margin: 40px;
+            height: 100px;
+            padding: 60px;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        }
+        button{
+            font-weight: bold;
+            background-color: white;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            padding: 40px;
+            margin: auto;
+            width: 60%;
+            margin-top: 20px;
+            border-radius: 20px;
+            border: none;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+        }
+        button:hover{
+            color: white;
+            background-color: rgba(255, 104, 4, 0.909);
+        }
+        .ii{
+            text-align: center;
+        }
+        img{
+            width: 350px;
+        }
+        .box{
+            text-align: center;
+        }
+        .box h2{
+            font-size: 5rem;
+            margin: 100px;
+        }
+        .box a{
+            font-weight: bold;
+            text-decoration: none;
+            background-color: white;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            padding: 40px;
+            color: black;
+            border-radius: 20px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="p1">
+    <div class="main" id="login-form">
+        <h2 id="log">Login</h2>
+          <div class="ii"><img src="1.png" alt=""></div>
+        <input type="text" id="username-input" placeholder="Enter your ID">
+        <input type="password" id="password-input" placeholder="Enter password">
+        <button id="submit-button">Login</button>
+    </div>
+    </div>
+<!--Next Page-->
+<div class="box">
+
+
+    <div id="next-page1" style="display: none;">
+        <h2>Welcome Salman Anik <br>Your ID <span id="welcome-username"></span></h2>
+        <a href="page1.html">View Your Profile</a>
+    </div>
+    <div id="next-page2" style="display: none;">
+        <h2>Welcome Sameul Hasan <br>Your ID <span id="welcome-username2"></span></h2>
+        <a style="" href="page2.html">View Your Profile</a>
+    </div>
+    <div id="next-page3" style="display: none;">
+        <h2>Welcome Sabbir Ahamed <br>Your ID <span id="welcome-username"></span></h2>
+        <a href="page3.html">View Your Profile</a>
+    </div>
+    <div id="next-page4" style="display: none;">
+        <h2>Welcome Nesar Nayem<br>Your ID <span id="welcome-username"></span></h2>
+        <a href="page4.html">View Your Profile</a>
+    </div>
+    <div id="next-page5" style="display: none;">
+        <h2>Welcome Galibul Alom <br>Your ID <span id="welcome-username"></span></h2>
+        <a href="page6.html">View Your Profile</a>
+    </div>
+
+</div>
+
+
+
+    <script>
+        document.getElementById("submit-button").addEventListener("click", function() {
+            var username = document.getElementById("username-input").value;
+            var password = document.getElementById("password-input").value;
+
+            // Replace 'username1', 'username2', 'password1', and 'password2' with your desired usernames and passwords
+            if (username === "salmananik" && password === "12345678") {
+                document.getElementById("login-form").style.display = "none";
+                document.getElementById("next-page1").style.display = "block";
+                document.getElementById("welcome-username").textContent = username;
+            } 
+            else if (username === "sameulhasan" && password === "12345678") {
+                document.getElementById("login-form").style.display = "none";
+                document.getElementById("next-page2").style.display = "block";
+                document.getElementById("welcome-username2").textContent = username;
+            }
+            else if (username === "sabbirahamed" && password === "12345678") {
+                document.getElementById("login-form").style.display = "none";
+                document.getElementById("next-page3").style.display = "block";
+                document.getElementById("welcome-username").textContent = username;
+            }
+            else if (username === "nesarnayem" && password === "12345678") {
+                document.getElementById("login-form").style.display = "none";
+                document.getElementById("next-page4").style.display = "block";
+                document.getElementById("welcome-username2").textContent = username;
+            }
+            else if (username === "galibulalom" && password === "12345678") {
+                document.getElementById("login-form").style.display = "none";
+                document.getElementById("next-page5").style.display = "block";
+                document.getElementById("welcome-username2").textContent = username;
+            }
+            else {
+                alert("Incorrect username or password. Please try again.");
+            }
+        });
+    </script>
+</body>
+</html>
